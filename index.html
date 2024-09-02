@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Periodic Table Reviewer</title>
+
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <header style="margin-bottom: 2rem;">
+        <h1>
+            skibidi periodic table reviewier
+        </h1>
+        tinamad magdesign kaya pagtyagaan nyo na <br>
+        <br>
+        INSTRUCTIONS: <br>
+        - answer the fields with "?" <br>
+        - for chemical symbol, answer example Helium = He <br>
+        - for chemical name, answer in ALL CAPITAL LETTERS
+    </header>
+
+    <div>
+        <label for="atomic_number">Atomic number</label>
+        <input type="text" id="atomic_number"> <br>
+
+        <label for="chemical_symbol">Chemical symbol</label>
+        <input type="text" id="chemical_symbol"> <br>
+
+        <label for="chemical_name">Chemical name</label>
+        <input type="text" id="chemical_name"> <br>
+
+        <button id="random_element" style="margin-bottom: 1rem;">Random element</button>
+        <button id="check_answer" style="margin-bottom: 1rem;">Check answer</button>
+    </div>
+
+    <h1 id="answer_reveal" style="display: none;">00 : EL : ELEMENT</h1>
+    <img id="wrong_emoji" style="display: none;" src="./assets/wrong.webp">
+</body>
+
+</html>
