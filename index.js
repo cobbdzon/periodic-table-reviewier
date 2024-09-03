@@ -77,13 +77,13 @@ document.addEventListener("DOMContentLoaded", () => {
             const answers = Array.from(elements_registry[atomic_number - 1])
             answers.unshift(String(atomic_number))
 
-            answer_reveal.innerText = answers[0] + " : " + answers[1]  + " : " + answers[2]
-            
+            answer_reveal.innerText = answers[0] + " : " + answers[1] + " : " + answers[2]
+
             // compare
             let all_correct = true
             for (let i = 0; i < 3; i++) {
                 const user_input = user_inputs[i]
-                const answer  = answers[i]
+                const answer = answers[i]
 
                 // has wrong asnwer
                 if (user_input != answer) {
