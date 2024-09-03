@@ -22,7 +22,7 @@ function giveRandomElement(elements_registry) {
 function trimElementInfo(element) {
     const n_info_to_trim = randomInt(1, 2)
 
-    const element_info = element.slice() // clone
+    const element_info = Array.from(element) // clone
     for (let i = 0; i < n_info_to_trim; i++) {
         const random_index = randomInt(0, element_info.length - 1)
         element_info[random_index] = "?"
@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         elements_promise.then((elements_registry) => {
             const atomic_number = Number(localStorage.getItem("cobbdzon-ptr-atomicnumber"))
-            const answers = elements_registry[atomic_number - 1]
+            const answers = Array.from(elements_registry[atomic_number - 1])
             answers.unshift(String(atomic_number))
 
             answer_reveal.innerText = answers[0] + " : " + answers[1]  + " : " + answers[2]
